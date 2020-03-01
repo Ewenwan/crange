@@ -1,5 +1,46 @@
 Crange
-======
+======.
+这是一个python写的调用libclang去定位和交叉检索C/C++源码的工具
+
+Crange是索引和交叉引用 C/C++ 源代码的工具。 它可以用于生成可以帮助的标记数据库：
+
+    标识符定义
+    标识符声明
+    引用
+    表达式
+    运算符
+    符号
+    源范围
+由Crange收集的源元数据可以帮助构建工具提供交叉引用。语法高亮。代码折叠和深层源代码搜索。
+
+命令行 选项
+crtags
+
+选项说明
+
+    -a，--auto-include	自动检测和添加包含路径( -isrc/include )
+    -i，--show-ids	不计算 cursor id ( 非常慢)
+    -m，--max-depth=N	限制 cursor 扩展到深度N
+    -d文件，--database=FILE	在数据库文件中创建标签
+    -j作业，--jobs=JOBS	指定同时运行的作业数
+    -v，--verbose	启用详细模式
+    注：如果跳过-j选项，crtags至少会创建 2个作业。
+
+crange
+
+选项说明
+
+    -d数据库，--database=DATABASE	在数据库文件中搜索标识符
+    -b，--show-body	显示标识符的完整正文
+    --list-kinds	列出标记数据库中存在的所有标识符类型
+    -k类型，--kind=KIND	显示种类的标识符
+    --list-types	列出标记数据库中存在的所有标识符类型
+    -t类型，--type=TYPE	显示类型的标识符
+    R，--refs	显示标识符引用
+    -v，--verbose	启用详细模式
+
+
+
 
 Synopsis
 --------
